@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View,Slider,ActivityIndicator} from 'react-native';
+import {View, Slider, ActivityIndicator, Modal, Text} from 'react-native';
 import {Picker} from '@react-native-community/picker';
 // import {Slider} from '@react-native-community/slider';
 
@@ -9,25 +9,28 @@ const Pick = () => {
   return (
     <View>
       <Picker
-        style={{width: 300,height:100}}
+        style={{width: 300, height: 100}}
         selectedValue={value}
         onValueChange={setValue}>
         <Picker.Item value="ind" label="India" />
         <Picker.Item value="nz" label="New Zealand" />
       </Picker>
       <Slider
-      value={72}
-      minimumValue={100}
-      maximumValue={200}
-      step={1}
-      onValueChange={x=>alert(x)}
+        value={72}
+        minimumValue={100}
+        maximumValue={200}
+        step={1}
+        onValueChange={(x) => alert(x)}
       />
-      <ActivityIndicator
-      size="large"
-      hidesWhenStopped
-      color="red"
-      animating
-      />
+      <ActivityIndicator size="large" hidesWhenStopped color="red" animating />
+      <Modal 
+      visible={!true} 
+      // animationType={'fade'}
+      >
+        <View style={{backgroundColor:'blue'}} >
+          <Text>hi</Text>
+        </View>
+      </Modal>
     </View>
   );
 };
