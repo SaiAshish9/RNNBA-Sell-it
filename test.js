@@ -6,10 +6,8 @@ import Animations1 from './components/anim2';
 import Animations2 from './components/anim3';
 import ImagePicker from './components/imagePicker';
 import Contacts from './components/contacts';
-
+import Location from './components/location';
 const App = () => {
-
-
   return (
     <>
       <StatusBar barStyle="dark-content" backgroundColor="white" />
@@ -17,8 +15,9 @@ const App = () => {
         {/* <Picker />
         <Animations1 />
         <Animations2 />*/}
-        <ImagePicker />
-        <Contacts />
+        {/* <ImagePicker /> */}
+        {/* <Contacts /> */}
+        <Location />
       </SafeAreaView>
     </>
   );
@@ -30,7 +29,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
 });
 
 export default App;
